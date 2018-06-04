@@ -75,6 +75,14 @@ app.get('/about', (request, response) => {
 	});
 });
 
+app.get('/projects', (request, response) => {
+
+	// renders templates
+	response.render('projects.hbs', {
+		pageTitle: 'Projects Page'
+	});
+});
+
 app.get('/bad', (request, response) => {
 	response.send({
 		errorMessage: 'Error handling request'
